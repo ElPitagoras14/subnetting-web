@@ -258,6 +258,7 @@ export default function FLSM() {
               }
             }}
           </Formik>
+          <div className="px-4 text-sm text-gray-400">Created by Pitágoras</div>
         </Sidebar>
         <div className="col-span-3">
           {result && (

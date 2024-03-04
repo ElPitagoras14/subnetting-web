@@ -383,8 +383,8 @@ export default function VLSM() {
                                         </button>
                                       </div>
                                     </div>
-                                    <div className="flex flex-col justify-between justify-items-center">
-                                      {hosts.length > 0 && (
+                                    {hosts.length > 0 && (
+                                      <div className="flex flex-col justify-between justify-items-center">
                                         <>
                                           <div className="pb-2">Hosts</div>
                                           <div className="bg-[#F5F5F5] px-2 py-3 space-y-3 max-h-96 overflow-y-auto scrollable-theme">
@@ -403,13 +403,12 @@ export default function VLSM() {
                                             )}
                                           </div>
                                         </>
-                                      )}
-                                    </div>
+                                      </div>
+                                    )}
                                   </>
                                 );
                               }}
                             </FieldArray>
-
                             <div className="flex justify-around pt-2">
                               <button
                                 type="button"
@@ -450,6 +449,9 @@ export default function VLSM() {
                 }
               }}
             </Formik>
+            <div className="px-4 text-sm text-gray-400">
+              Created by Pitágoras
+            </div>
           </Sidebar>
           <div className="col-span-3">
             {result && (
