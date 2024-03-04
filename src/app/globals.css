@@ -3,27 +3,44 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground: #282C34;
+  --background: #FAFAFA;
+  --scroll-bar: #FAFAFA;
+  --operative-color: #808080;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground: #282C34;
+    --background: #FAFAFA;
+    --scroll-bar: #FAFAFA;
+    --operative-color: #808080;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--foreground);
+  background: var(--background)
+}
+
+.scrollable-theme::-webkit-scrollbar {
+  width: 5px;
+}
+
+.scrollable-theme::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 10px 10px 8px var(--scroll-bar);
+}
+
+.scrollable-theme::-webkit-scrollbar-thumb {
+  background-color: var(--operative-color);
+}
+
+.rd3t-node > circle {
+  fill: var(--foreground);
+}
+
+.rd3t-leaf-node > circle {
+  fill: var(--foreground);
 }
 
 @layer utilities {
